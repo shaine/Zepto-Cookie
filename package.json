@@ -1,0 +1,18 @@
+{
+  "name": "Zepto-Cookie",
+  "version": "1.0.0",
+  "description": "A simple plugin to read, set, and delete cookies. This plugin extends [Zepto.js](https://github.com/madrobby/zepto) with a `$.cookie` method.",
+  "main": "zepto.cookie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shaine/Zepto-Cookie.git"
+  },
+  "author": "dcompute",
+  "bugs": {
+    "url": "https://github.com/shaine/Zepto-Cookie/issues"
+  },
+  "homepage": "https://github.com/shaine/Zepto-Cookie"
+}
