@@ -1,9 +1,9 @@
 // Zepto.cookie plugin
-// 
-// Copyright (c) 2010, 2012 
+//
+// Copyright (c) 2010, 2012
 // @author Klaus Hartl (stilbuero.de)
 // @author Daniel Lacy (daniellacy.com)
-// 
+//
 // Dual licensed under the MIT and GPL licenses:
 // http://www.opensource.org/licenses/mit-license.php
 // http://www.gnu.org/licenses/gpl.html
@@ -46,5 +46,11 @@
             return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null
         }
 
-    })
+    });
+    $.cookie = $.fn.cookie;
+    $.removeCookie = function (key, options) {
+        // Must not alter options, thus extending a fresh object...
+        $.cookie(key, '', $.extend({}, options, { expires: -1 }));
+        return !$.cookie(key);
+    };
 })(Zepto)
